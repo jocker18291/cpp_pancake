@@ -28,7 +28,7 @@ int main() {
             }
             break;
         default:
-            cout << "Error: Unknown operation. Try next time." << endl;
+            cout << "Error: Unknown operation." << endl;
             break;
     }
     return 0;
