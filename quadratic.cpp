@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -10,4 +11,11 @@ int main() {
     if (delta < 0) {
         cout << "No real solutions." << endl;
     }
+    else if(delta == 0) {
+        cout << "The solution equals to: " << (-1 * b) / (2 * a) << endl;
+    }
+    else {
+        cout << "Solutions are equal to " << ((-1 * b) + sqrt(delta)) / (2 * a) << " and " << ((-1 * b) - sqrt(delta)) / (2 * a) << endl;
+    }
+    return 0;
 }
