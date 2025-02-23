@@ -47,6 +47,7 @@ void display(int arr[]) {
 }
 
 int main() {
+    srand(time(0));
     int arr[SIZE];
     int choice = 0;
     do {
