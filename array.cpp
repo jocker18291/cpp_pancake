@@ -5,8 +5,10 @@ using namespace std;
 const int SIZE = 5;
 
 void setElem() {
+    int arr[SIZE];
     for(int i = 0; i < SIZE; i++) {
-        
+        cout << "Enter the element no. " << i+1 << " : ";
+        cin >> arr[i];
     }
 }
 
