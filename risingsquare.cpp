@@ -19,12 +19,15 @@ void square(int size) {
 
 int main() {
     int size = 2;
-    while(size <= 8){
+    while(true){
         system("clear");
         wait(1);
         square(size);
         wait(1);
         size += 2;
+        if(size > 8) {
+            size = 2;
+        }
     }
     return 0;
 }
