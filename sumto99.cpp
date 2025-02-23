@@ -36,6 +36,9 @@ void Euclid(){
 int main(){
     int choice = 0;
     do {
+        cout << "0 - Exit" << endl;
+        cout << "1 - Summing nums until given 99 (only [-15, 15])" << endl;
+        cout << "2 - Euclid function" << endl;
         cout << "Enter a number to run the given program: ";
         cin >> choice;
         switch (choice) {
