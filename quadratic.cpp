@@ -7,6 +7,7 @@ using namespace std;
 int main() {
     float a = 0, b = 0, c = 0;
     int p = 0;
+    char two = 178;
     cout << "Enter your coefficients: ";
     cin >> a >> b >> c;
     float delta = (b * b) - 4 * a * c;
@@ -33,6 +34,22 @@ int main() {
         else if (b == 0 && c == 0){
             cout << "All real numbers are the solution." << endl;
         }
+    }
+    if(a != 0) {
+        cout << a << "x" << two;
+        if (b > 0) {
+            cout << " + " << b << "x";
+        }
+        else if (b < 0) {
+            cout << " - " << b << "x";
+        }
+        if (c > 0){
+            cout << " + " << c;
+        }
+        else if (c < 0) {
+            cout << " - " << c;
+        }
+        cout << " = 0" << endl;
     }
     return 0;
 }
