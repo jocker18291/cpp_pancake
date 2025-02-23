@@ -19,6 +19,16 @@ void sumOfElem(int arr[]) {
     cout << S << endl;
 }
 
+void maxElem(int arr[]) {
+    int max = 0;
+    for (int i = 0; i < SIZE; i++) {
+        if(max < arr[i]) {
+            max = arr[i];
+        }
+    }
+    cout << "Biggest value is: " << max << endl;
+}
+
 int main() {
     int arr[SIZE];
     int choice = 0;
@@ -26,6 +36,7 @@ int main() {
         cout << "0 - Exit" << endl;
         cout << "1 - Set elements in the array of size " << SIZE << endl;
         cout << "2 - Sum of all elements of the array" << endl;
+        cout << "3 - Largest element of the array" << endl;
         cout << "Choose: ";
         cin >> choice;
         switch(choice) {
@@ -36,6 +47,9 @@ int main() {
                 break;
             case 2:
                 sumOfElem(&arr[SIZE]);
+                break;
+            case 3:
+                maxElem(&arr[SIZE]);
                 break;
             default:
                 cout << "Choice unknown. Try again." << endl;
