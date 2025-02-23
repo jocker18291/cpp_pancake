@@ -40,6 +40,12 @@ void random(int arr[]) {
     }
 }
 
+void display(int arr[]) {
+    for (int i = 0; i < SIZE; i++) {
+        cout << "arr[" << i << "] = " << arr[i] << endl;
+    }
+}
+
 int main() {
     int arr[SIZE];
     int choice = 0;
@@ -49,6 +55,7 @@ int main() {
         cout << "2 - Sum of all elements of the array" << endl;
         cout << "3 - Largest element of the array" << endl;
         cout << "4 - Random numbers in a range" << endl;
+        cout << "5 - Display" << endl;
         cout << "Choose: ";
         cin >> choice;
         switch(choice) {
@@ -65,6 +72,9 @@ int main() {
                 break;
             case 4:
                 random(&arr[SIZE]);
+                break;
+            case 5:
+                display(&arr[SIZE]);
                 break;
             default:
                 cout << "Choice unknown. Try again." << endl;
