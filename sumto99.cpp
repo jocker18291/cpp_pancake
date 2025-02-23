@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sum(){
+void sum(){
     int n = 0;
     int S = 0;
     while (true){
@@ -15,7 +15,22 @@ int sum(){
             break;
         }
     }
-    return S;
+    cout << "The sum equals: " << S << endl;
+}
+
+void Euclid(){
+    unsigned int a, b;
+    cout << "Enter two unsigned nums: ";
+    cin >> a >> b;
+    while (a != b) {
+        if (a > b) {
+            a -= b;
+        }
+        else {
+            b -= a;
+        }
+    }
+    cout << "The solution equals to " << a << endl;
 }
 
 int main(){
@@ -27,8 +42,7 @@ int main(){
             case 0:
                 break;
             case 1:
-                int solution = sum();
-                cout << "The sum equals: " << solution << endl;
+                sum();
                 break;
             case 2:
                 break;
