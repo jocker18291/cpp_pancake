@@ -35,21 +35,26 @@ int main() {
             cout << "All real numbers are the solution." << endl;
         }
     }
-    if(a != 0) {
+    
+    if(a > 0){
         cout << a << "x" << two;
-        if (b > 0) {
-            cout << " + " << b << "x";
-        }
-        else if (b < 0) {
-            cout << " - " << b << "x";
-        }
-        if (c > 0){
-            cout << " + " << c;
-        }
-        else if (c < 0) {
-            cout << " - " << c;
-        }
-        cout << " = 0" << endl;
     }
+    else if(a < 0){
+        cout << "-" << a << "x" << two;
+    }
+    if (b > 0) {
+            cout << " + " << b << "x";
+    }
+    else if (b < 0) {
+        cout << " - " << b << "x";
+    }
+    if (c > 0){
+        cout << " + " << c;
+    }
+    else if (c < 0) {
+        cout << " - " << c;
+    }
+    cout << " = 0" << endl;
+    
     return 0;
 }
