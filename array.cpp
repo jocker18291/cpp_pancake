@@ -61,10 +61,20 @@ void decToBin(int arr[]) {
     }
 }
 
+int search(int arr[], int num) {
+    for (int i = 0; i < SIZE; i++) {
+        if(arr[i] == num) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int main() {
     srand(time(0));
     int arr[SIZE];
     int choice = 0;
+    int num = 0, index = 0;
     do {
         cout << "0 - Exit" << endl;
         cout << "1 - Set elements in the array of size " << SIZE << endl;
@@ -73,6 +83,7 @@ int main() {
         cout << "4 - Random numbers in a range" << endl;
         cout << "5 - Display" << endl;
         cout << "6 - Decimal to binary" << endl;
+        cout << "7 - Number search" << endl;
         cout << "Choose: ";
         cin >> choice;
         switch(choice) {
@@ -95,6 +106,17 @@ int main() {
                 break;
             case 6:
                 decToBin(arr);
+                break;
+            case 7:
+                cout << "Enter a number you want to know where it is: ";
+                cin >> num;
+                index = search(arr, num);
+                if(index != -1) {
+                    cout << "Your number is on " << index << " place!" << endl;
+                }
+                else {
+                    cout << "No such number in the array." << endl;
+                }
                 break;
             default:
                 cout << "Choice unknown. Try again." << endl;
