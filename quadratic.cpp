@@ -23,6 +23,12 @@ int main() {
         if(b != 0){
             cout << "It's linear and the solution is: " << (-1 * c) / b << endl;
         }
+        else if(b == 0 && c != 0){
+            cout << "The equation has no solutions." << endl;
+        }
+        else {
+            cout << "All real numbers are the solution." << endl;
+        }
     }
     return 0;
 }
