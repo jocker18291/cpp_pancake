@@ -21,8 +21,10 @@ int main() {
     int size = 2;
     while(size <= 8){
         system("clear");
+        wait(1);
         square(size);
         wait(1);
+        size += 2;
     }
     return 0;
 }
