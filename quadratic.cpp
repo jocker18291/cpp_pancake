@@ -26,7 +26,7 @@ int main() {
         else if(b == 0 && c != 0){
             cout << "The equation has no solutions." << endl;
         }
-        else {
+        else if (b == 0 && c == 0){
             cout << "All real numbers are the solution." << endl;
         }
     }
