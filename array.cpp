@@ -46,6 +46,21 @@ void display(int arr[]) {
     }
 }
 
+void decToBin(int arr[]) {
+    unsigned int num = 0;
+    cout << "Enter a number in range [0-30]: ";
+    cin >> num;
+    for(int i = 0; i < SIZE; i++) {
+        arr[i] = -1;
+    }
+    int end = SIZE - 1;
+    while(num > 0 && end >= 0) {
+        arr[end] = num % 2;
+        num /= 2;
+        end--;
+    }
+}
+
 int main() {
     srand(time(0));
     int arr[SIZE];
@@ -57,6 +72,7 @@ int main() {
         cout << "3 - Largest element of the array" << endl;
         cout << "4 - Random numbers in a range" << endl;
         cout << "5 - Display" << endl;
+        cout << "6 - Decimal to binary" << endl;
         cout << "Choose: ";
         cin >> choice;
         switch(choice) {
@@ -76,6 +92,9 @@ int main() {
                 break;
             case 5:
                 display(arr);
+                break;
+            case 6:
+                decToBin(arr);
                 break;
             default:
                 cout << "Choice unknown. Try again." << endl;
