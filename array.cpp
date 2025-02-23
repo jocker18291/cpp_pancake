@@ -62,19 +62,19 @@ int main() {
             case 0:
                 break;
             case 1:
-                setElem(&arr[SIZE]);
+                setElem(arr);
                 break;
             case 2:
-                sumOfElem(&arr[SIZE]);
+                sumOfElem(arr);
                 break;
             case 3:
-                maxElem(&arr[SIZE]);
+                maxElem(arr);
                 break;
             case 4:
-                random(&arr[SIZE]);
+                random(arr);
                 break;
             case 5:
-                display(&arr[SIZE]);
+                display(arr);
                 break;
             default:
                 cout << "Choice unknown. Try again." << endl;
