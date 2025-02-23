@@ -21,6 +21,8 @@ int sum(){
 int main(){
     int choice = 0;
     do {
+        cout << "Enter a number to run the given program: ";
+        cin >> choice;
         switch (choice) {
             case 0:
                 break;
