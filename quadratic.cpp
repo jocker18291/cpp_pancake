@@ -36,23 +36,29 @@ int main() {
         }
     }
     
-    if(a > 0){
+    if(a > 0 && a != 1){
         cout << a << "x" << two;
     }
-    else if(a < 0){
-        cout << "-" << a << "x" << two;
+    else if(a == 1) {
+        cout << "x" << two;
     }
-    if (b > 0) {
+    else if(a < 0){
+        cout << a << "x" << two;
+    }
+    if (b > 0 && b != 1) {
             cout << " + " << b << "x";
     }
+    else if(b == 1) {
+        cout << "x";
+    }
     else if (b < 0) {
-        cout << " - " << b << "x";
+        cout << b << "x";
     }
     if (c > 0){
         cout << " + " << c;
     }
     else if (c < 0) {
-        cout << " - " << c;
+        cout << c;
     }
     cout << " = 0" << endl;
     
