@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -29,6 +31,15 @@ void maxElem(int arr[]) {
     cout << "Biggest value is: " << max << endl;
 }
 
+void random(int arr[]) {
+    int minVal, maxVal;
+    cout << "Enter minimum and maximum value of random numbers: ";
+    cin >> minVal >> maxVal;
+    for(int i = 0; i < SIZE; i++) {
+        arr[i] = minVal + rand() % (maxVal - minVal + 1);
+    }
+}
+
 int main() {
     int arr[SIZE];
     int choice = 0;
@@ -37,6 +48,7 @@ int main() {
         cout << "1 - Set elements in the array of size " << SIZE << endl;
         cout << "2 - Sum of all elements of the array" << endl;
         cout << "3 - Largest element of the array" << endl;
+        cout << "4 - Random numbers in a range" << endl;
         cout << "Choose: ";
         cin >> choice;
         switch(choice) {
@@ -50,6 +62,9 @@ int main() {
                 break;
             case 3:
                 maxElem(&arr[SIZE]);
+                break;
+            case 4:
+                random(&arr[SIZE]);
                 break;
             default:
                 cout << "Choice unknown. Try again." << endl;
