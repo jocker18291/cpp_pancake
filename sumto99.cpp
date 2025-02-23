@@ -45,6 +45,7 @@ int main(){
                 sum();
                 break;
             case 2:
+                Euclid();
                 break;
             default:
                 cout << "Unknown choice. Try again." << endl;
