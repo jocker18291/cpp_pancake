@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 
 using namespace std;
 
@@ -70,6 +71,16 @@ int search(int arr[], int num) {
     return -1;
 }
 
+void sortArr(int arr[]) {
+    for(int i = 0; i < SIZE - 1; i++){
+        for(int j = 0; j < SIZE - 1; j++){
+            if(arr[j] > arr[j+1]){
+                swap(arr[j], arr[j+1]);
+            }
+        }
+    }
+}
+
 int main() {
     srand(time(0));
     int arr[SIZE];
@@ -84,6 +95,7 @@ int main() {
         cout << "5 - Display" << endl;
         cout << "6 - Decimal to binary" << endl;
         cout << "7 - Number search" << endl;
+        cout << "8 - Sort the array" << endl;
         cout << "Choose: ";
         cin >> choice;
         switch(choice) {
@@ -117,6 +129,9 @@ int main() {
                 else {
                     cout << "No such number in the array." << endl;
                 }
+                break;
+            case 8:
+                sortArr(arr);
                 break;
             default:
                 cout << "Choice unknown. Try again." << endl;
