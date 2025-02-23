@@ -19,7 +19,21 @@ int sum(){
 }
 
 int main(){
-    int solution = sum();
-    cout << "The sum equals: " << solution << endl;
+    int choice = 0;
+    do {
+        switch (choice) {
+            case 0:
+                break;
+            case 1:
+                int solution = sum();
+                cout << "The sum equals: " << solution << endl;
+                break;
+            case 2:
+                break;
+            default:
+                cout << "Unknown choice. Try again." << endl;
+        }
+    } while (choice != 0);
+    
     return 0;
 }
