@@ -10,6 +10,9 @@ void histogram(string str) {
             str[i] += 32;
         }
     }
+    for (auto &p : count) {
+        cout << p.first << " " << string(p.second, '#') << endl;
+    }
 }
 
 int main() {
