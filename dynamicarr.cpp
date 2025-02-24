@@ -35,6 +35,18 @@ public:
         arr[size] = value;
         size++;
     }
+
+    void removeElement(int index) {
+        if(index < 0 || index >= size) {
+            cout << "Index out of range\n";
+            return;
+        }
+        for(int i = index; i < size - 1; ++i) {
+            arr[i] = arr[i + 1];
+        }
+
+        size--;
+    }
 };
 
 int main() {
