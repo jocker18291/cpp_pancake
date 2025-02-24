@@ -29,13 +29,11 @@ public:
     }
 
     void addElement(int value) {
-        if(size < capacity) {
-            arr[size + 1] = value;
-        }
-        else {
+        if(size > capacity) {
             resize(arr);
-            arr[size + 1] = value;
         }
+        arr[size] = value;
+        size++;
     }
 };
 
