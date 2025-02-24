@@ -8,7 +8,7 @@ private:
     int capacity;
     int *arr;
 
-    void resize(int *arr) {
+    void resize() {
         capacity *= 2;
         int *newArr = new int[capacity];
         for(int i = 0; i < size; i++) {
@@ -30,7 +30,7 @@ public:
 
     void addElement(int value) {
         if(size > capacity) {
-            resize(arr);
+            resize();
         }
         arr[size] = value;
         size++;
@@ -46,6 +46,18 @@ public:
         }
 
         size--;
+    }
+
+    void display() const {
+        for (int i = 0; i < size; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+
+    void displayCount() const {
+        cout << "Size: " << size << endl;
+        cout << "Capacity: " << capacity << endl;
     }
 };
 
