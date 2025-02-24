@@ -29,7 +29,7 @@ public:
     }
 
     void addElement(int value) {
-        if(size > capacity) {
+        if(size == capacity) {
             resize();
         }
         arr[size] = value;
@@ -62,6 +62,16 @@ public:
 };
 
 int main() {
-
+    DynamicArray array;
+    array.addElement(5);
+    array.addElement(17);
+    array.addElement(90);
+    array.addElement(29);
+    array.addElement(78);
+    array.display();
+    array.displayCount();
+    array.removeElement(2);
+    array.display();
+    array.displayCount();
     return 0;
 }
