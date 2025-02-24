@@ -27,6 +27,16 @@ public:
     ~DynamicArray() {
         delete []arr;
     }
+
+    void addElement(int value) {
+        if(size < capacity) {
+            arr[size + 1] = value;
+        }
+        else {
+            resize(arr);
+            arr[size + 1] = value;
+        }
+    }
 };
 
 int main() {
