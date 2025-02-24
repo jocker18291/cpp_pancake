@@ -10,6 +10,13 @@ void histogram(string str) {
             str[i] += 32;
         }
     }
+
+    for(char c : str) {
+        if(c >= 97 && c <= 122) {
+            count[c]++;
+        }
+    }
+
     for (auto &p : count) {
         cout << p.first << " " << string(p.second, '#') << endl;
     }
@@ -18,6 +25,7 @@ void histogram(string str) {
 int main() {
     string str;
     cout << "Enter a text: ";
-    cin >> str;
+    getline(cin, str);
+    histogram(str);
     return 0;
 }
