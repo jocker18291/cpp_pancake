@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -10,6 +12,14 @@ private:
     char size;
     string color;
 };
+
+void loadPresents(vector<Present> presents, const string &filename) {
+    ifstream file(filename);
+    if(!file) {
+        cout << "No such database file." << endl;
+        return;
+    }
+}
 
 int main() {
 
