@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -18,6 +19,15 @@ void loadPresents(vector<Present> presents, const string &filename) {
     if(!file) {
         cout << "No such database file." << endl;
         return;
+    }
+
+    presents.clear();
+
+    string line;
+    while(getline(file, line)) {
+        stringstream ss(line);
+        Present p;
+        string weightStr;
     }
 }
 
